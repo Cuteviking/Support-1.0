@@ -20,6 +20,7 @@
 				<header>
 					<label for="name">Name:</label><input type="text" id="name" />
 					<label for="plats">Plats:</label><input type="text" id="plats" />
+                    <label for="tele">Telefon nr:</label><input type="text" id="tele" />
 					<span>ID</span>	
 				</header>
 				<label for="problem"></label><textarea id="problem" placeholder="Problem"></textarea>
