@@ -11,23 +11,27 @@
 				<h1>DHS16</h1>
 				<nav class="mainNav">
 					<ul>
-						<li>Checkin</li>
-						<li>Checkout</li>
+						<li><a href="index.php">Checkin</a></li>
+						<li><a href="checkout.php">Checkout</a></li>
 					</ul>
 				</nav>
 			</header>
 			<form action="#" method="POST" id="checkout">
-				<label for="id">ID:</div><input type="text" id="id" />
+				<label for="id">ID:</label><input type="text" id="id" />
 				<input type="submit" />
 			</form>
 			<!-- hämta data -->
-			<form action="#" method="POST" id="">
+			<div id="checkout">
 				<div>Name:</div>
 				<div>Plats:</div>
 				<span>ID</span>
 				<div>Problem:</div>
 				<div>Guess:</div>
 				<div>Delar:</div>
+			</div>
+			
+			<form action="#" method="POST" id="">
+				<label for="fix">Lösning:</label><input type="text" id="fix" />
 				<input type="submit" />
 			</form>
 		</div>
