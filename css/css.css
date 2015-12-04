@@ -7,7 +7,7 @@ body{
 	margin: 0 auto;
 }
 
-.pageContainer header{
+.pageContainer>header{
 	margin: 32px 0;
 }
 
@@ -16,9 +16,33 @@ body{
 }
 
 .mainNav ul{
-	overflow: hidden;
+	text-align: center;
+	list-style: none;
 }
 
 .mainNav li{
-	
+	display: inline-block;
+	padding: 8px;
+}
+
+#checkin{
+	border:solid 1px #000;
+}
+
+#checkin header{
+	background-color: #ddd;
+	padding: 16px;
+}
+
+#checkin textarea{
+	width: 100%;
+}
+
+#checkin footer {
+	overflow: hidden;
+}
+
+#checkin footer input{
+	float: right;
+	margin: 8px 8px 8px 32px;
 }

@@ -17,13 +17,17 @@
 				</nav>
 			</header>
 			<form action="#" method="POST" id="checkin">
-				<label for="name">Name:</label><input type="text" id="name" />
-				<label for="plats">Plats:</label><input type="text" id="plats" />
-				<span>ID</span>
-				<label for="problem">Problem:</label><textarea id="problem"></textarea>
+				<header>
+					<label for="name">Name:</label><input type="text" id="name" />
+					<label for="plats">Plats:</label><input type="text" id="plats" />
+					<span>ID</span>	
+				</header>
+				<label for="problem"></label><textarea id="problem" placeholder="Problem"></textarea>
 				<label for="guess">Guess:</label><textarea id="guess"></textarea>
 				<label for="parts">Delar:</label><textarea id="parts" placeholder="Eventuella delar"></textarea>
-				<input type="submit" />
+				<footer>
+					 <input type="submit" />	
+				</footer>
 			</form>
 		</div>
 	</body>
