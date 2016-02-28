@@ -8,11 +8,11 @@
 	<body>
 		<div class="pageContainer">
 			<header>
-				<hProblem>DHSProblem6</hProblem>
-				<nav class="mainNav">
+				<h1>DHS16</h1>
+				<nav class="mainNav no-print">
 					<ul>
 						<li><a href="index.php">Checkin</a></li>
-						<li><a href="checkout.php">Checkout</a></li>
+						<li><a href="receipt.php">Checkout</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -33,24 +33,25 @@
 	$sthProblem->bindParam( 1, $_GET['social']);
 	$sthProblem->execute();
 	
- 	while($row = $sth->fetch(PDO::FETCH_ASSOC) && $rowProblem = $sthProblem->fetch(PDO::FETCH_ASSOC)) {?>
-   
+ 	while($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+ 		while($rowProblem = $sthProblem->fetch(PDO::FETCH_ASSOC)) {
+ 		?>
     	
 			<main>
-				<header>
+				<section>
 					<?php echo $rowProblem['header']." ID:".$rowProblem['id'];?>
-				</header>
+				</section>
 				<section>
 					<?php echo $row['name']?>
 				</section>
-				<section>
-					<?php echo $row['social']?>
+				<section class="no-print">
+					<?php echo "SSN: ".$row['social']?>
 				</section>
 				<section>
-					<?php echo $row['seat']?>
+					<?php echo "Seat: ".$row['seat']?>
 				</section>
-				<section>
-					<?php echo $row['phone']?>
+				<section class="no-print">
+					<?php echo "Phonenumber: ".$row['phone']?>
 				</section>
 				<section>
 					<?php echo $rowProblem['header']?>
@@ -59,16 +60,20 @@
 					<?php echo $rowProblem['description']?>
 				</section>
 				<section>
-					<?php echo $rowProblem['parts']?>
+					<?php echo "Parts: ".$rowProblem['parts']?>
 				</section>
 				<section>
-					<?php echo $rowProblem['check_in']?>
+					<?php echo "In check: ".$rowProblem['check_in']?>
 				</section>
 			</main>
 	
 	
-	<?php } ?>
-			<button>Print</button>
+	<?php 
+		}
+	} 
+	?>
+			<button id="print" class="no-print">Print</button>
+			<button id="checkOut" class="no-print">checkOut</button>
 		</div>
 	</body>
 </html>

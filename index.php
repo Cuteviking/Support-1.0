@@ -12,10 +12,11 @@
 				<nav class="mainNav">
 					<ul>
 						<li><a href="index.php">Checkin</a></li>
-						<li><a href="checkout.php">Checkout</a></li>
+						<li><a href="receipt.php">Checkout</a></li>
 					</ul>
 				</nav>
 			</header>
+			<?php include 'nr.php';?>
 			<form action="check/in.php" method="POST" id="checkin">
 				<div class="user">
 					<section>
