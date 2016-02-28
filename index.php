@@ -19,27 +19,27 @@
 			<form action="check/in.php" method="POST" id="checkin">
 				<div class="user">
 					<section>
-						<label for="name">Nick:</label><input type="text" id="name" />
+						<label for="name">Nick:</label><input type="text" id="name" name="name" />
 					</section>
 					<section>
-						<label for="social">Social security number:</label><input type="text" id="social" placeholder="YYYY-MM-DD-XXXX"/>
+						<label for="social">Social security number:</label><input name="social" type="text" id="social" placeholder="YYYY-MM-DD-XXXX"/>
 					</section>
 					<section>
-						<label for="plats">Seat:</label><input type="text" id="plats" />
+						<label for="seat">Seat:</label><input name="seat" type="text" id="seat" />
 					</section>
 					<section>
-                    	<label for="tele">Phone nr:</label><input type="text" id="tele" />
+                    	<label for="phone">Phone nr:</label><input name="phone" type="text" id="phone" />
                     </section>
 				</div>
 				<div class="problem">
 					<section>
-						<label for="problem">Problem:</label><input id="problem" type="text" />
+						<label for="problem">Problem:</label><input name="problem" id="problem" type="text" />
 					</section>
 					<section>
-						<label for="problemDesc">Problem Description:</label><textarea id="problemDesc" ></textarea>
+						<label for="problemDesc">Problem Description:</label><textarea name="problemDesc" id="problemDesc" ></textarea>
 					</section>
 					<section>
-						<label for="parts">Parts:</label><textarea id="parts" ></textarea>
+						<label for="parts">Parts:</label><textarea id="parts" name="parts" ></textarea>
 					</section>
 				</div>
 				<footer>
