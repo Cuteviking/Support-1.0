@@ -17,7 +17,7 @@
 				</nav>
 			</header>
 			<?php include 'nr.php';?>
-			<form action="check/in.php" method="POST" id="checkin">
+			<form action="check/in.php" method="POST" id="check">
 				<div class="user">
 					<section>
 						<label for="name">Nick:</label><input type="text" id="name" name="name" />

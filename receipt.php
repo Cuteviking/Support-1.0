@@ -37,34 +37,38 @@
  		while($rowProblem = $sthProblem->fetch(PDO::FETCH_ASSOC)) {
  		?>
     	
-			<main>
-				<section>
+			<main id="check">
+				<header>
 					<?php echo $rowProblem['header']." ID:".$rowProblem['id'];?>
-				</section>
-				<section>
-					<?php echo $row['name']?>
-				</section>
-				<section class="no-print">
-					<?php echo "SSN: ".$row['social']?>
-				</section>
-				<section>
-					<?php echo "Seat: ".$row['seat']?>
-				</section>
-				<section class="no-print">
-					<?php echo "Phonenumber: ".$row['phone']?>
-				</section>
-				<section>
-					<?php echo $rowProblem['header']?>
-				</section>
-				<section>
-					<?php echo $rowProblem['description']?>
-				</section>
-				<section>
-					<?php echo "Parts: ".$rowProblem['parts']?>
-				</section>
-				<section>
-					<?php echo "In check: ".$rowProblem['check_in']?>
-				</section>
+				</header>
+				<div class="user">
+					<section>
+						<?php echo $row['name']?>
+					</section>
+					<section class="no-print">
+						<?php echo "SSN: ".$row['social']?>
+					</section>
+					<section>
+						<?php echo "Seat: ".$row['seat']?>
+					</section>
+					<section class="no-print">
+						<?php echo "Phonenumber: ".$row['phone']?>
+					</section>
+				</div>
+				<div class="problem">
+					<section>
+						<?php echo $rowProblem['header']?>
+					</section>
+					<section>
+						<?php echo $rowProblem['description']?>
+					</section>
+					<section>
+						<?php echo "Parts: ".$rowProblem['parts']?>
+					</section>
+					<section>
+						<?php echo "In check: ".$rowProblem['check_in']?>
+					</section>
+				</div>
 			</main>
 	
 	
@@ -73,7 +77,6 @@
 	} 
 	?>
 			<button id="print" class="no-print">Print</button>
-			<button id="checkOut" class="no-print">checkOut</button>
 		</div>
 	</body>
 </html>
