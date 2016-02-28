@@ -43,24 +43,34 @@ body{
 	font-size:36px;
 	color:#F90;
 }
-#checkin, #checkout{
+form{
 	border:solid 1px #000;
+	overflow:hidden;
 }
 
-#checkin header{
+form .user, form .problem{
 	background-color: rgba(51,51,51,0.8);
-	padding: 16px;
 }
 
-#checkin textarea{
-	width: 100%;
+form label{
+	width: 50%;
+	display: inline-block;
 }
 
-#checkin footer {
-	overflow: hidden;
+form section{
+	padding:8px 16px;
 }
 
-#checkin footer input{
-	float: right;
+form textarea, form input[type="text"]{
+	width: 50%;
+}
+form textarea{
+	height: 100px;
+}
+
+form footer {
+}
+
+form footer input{
 	margin: 8px 8px 8px 32px;
 }

@@ -16,16 +16,32 @@
 					</ul>
 				</nav>
 			</header>
-			<form action="#" method="POST" id="checkin">
-				<header>
-					<label for="name">Name:</label><input type="text" id="name" />
-					<label for="plats">Plats:</label><input type="text" id="plats" />
-                    <label for="tele">Telefon nr:</label><input type="text" id="tele" />
-					<span>ID</span>	
-				</header>
-				<label for="problem"></label><textarea id="problem" placeholder="Problem"></textarea>
-				<label for="guess">Guess:</label><textarea id="guess"></textarea>
-				<label for="parts">Eve. delar:</label><textarea id="parts" placeholder="Eventuella delar"></textarea>
+			<form action="check/in.php" method="POST" id="checkin">
+				<div class="user">
+					<section>
+						<label for="name">Nick:</label><input type="text" id="name" />
+					</section>
+					<section>
+						<label for="social">Social security number:</label><input type="text" id="social" placeholder="YYYY-MM-DD-XXXX"/>
+					</section>
+					<section>
+						<label for="plats">Seat:</label><input type="text" id="plats" />
+					</section>
+					<section>
+                    	<label for="tele">Phone nr:</label><input type="text" id="tele" />
+                    </section>
+				</div>
+				<div class="problem">
+					<section>
+						<label for="problem">Problem:</label><input id="problem" type="text" />
+					</section>
+					<section>
+						<label for="problemDesc">Problem Description:</label><textarea id="problemDesc" ></textarea>
+					</section>
+					<section>
+						<label for="parts">Parts:</label><textarea id="parts" ></textarea>
+					</section>
+				</div>
 				<footer>
 					 <input type="submit" />	
 				</footer>
