@@ -54,7 +54,7 @@ body{
 
 #check label{
 	width: 50%;
-	display: inline-block;
+	float: left;
 }
 
 #check section{
