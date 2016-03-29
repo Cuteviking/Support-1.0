@@ -1,22 +1,6 @@
-<!DOCTYPE >
-<html>
-	<head>
-		<meta http-equiv="Content-Type"	content="text/html" charset="UTF-8">
-		<link href="css/css.css" rel="stylesheet" type="text/css">
-		<script src="js/js.js"></script>
-	</head>
-	<body>
-		<div class="pageContainer">
-			<header>
-				<h1>DHS16</h1>
-				<nav class="mainNav">
-					<ul>
-						<li><a href="index.php">Checkin</a></li>
-						<li><a href="checkout.php">Checkout</a></li>
-					</ul>
-				</nav>
-			</header>
-			<?php include 'nr.php';?>
+<?php include 'header.php'?>
+
+
 			<form action="check/in.php" method="POST" id="check">
 				<div class="user">
 					<section>
@@ -47,6 +31,6 @@
 					 <input type="submit" />	
 				</footer>
 			</form>
-		</div>
+		<main>
 	</body>
 </html>

@@ -1,0 +1,17 @@
+index:
+receipt:
+Sign från deltagare
+checkout:
+Länka till seatmap
+ska kunna skriva ut kvitto receipt
+
+design
+skapa header.php
+sortera!
+
+Kul: (egen tv?)
+antal lösta saker
+kategorier
+diagram 
+ajax!!!!
+
