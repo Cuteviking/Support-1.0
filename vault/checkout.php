@@ -1,4 +1,4 @@
-<?php include 'header.php'?>
+<?php include '../header.php'?>
 
 
 			<form action="#" method="GET" id="check">
@@ -6,7 +6,7 @@
 			</form>
 			
 <?php 	if(isset($_GET['checkOut'])) {
-			include 'check/db.inc.php'; 
+			include 'db.inc.php'; 
 			$sql = "SELECT * FROM  `dhs16_problem` WHERE 'social' OR 'id' OR `name` = ? ";
 			
 			$sth = $db->prepare($sql);

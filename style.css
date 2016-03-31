@@ -5,32 +5,19 @@ body{
 	overflow:hidden;
 }
 
-header{
-	height:120px;
+.callout.primary{
+	background-color: #072C67;
+
+}
+
+.logo{
+	width:20%;
+	padding: 32px 16px;
+}
+
+
+.off-canvas{
 	background-color: #FF6600;
-
-}
-
-nav{
-	float:left;
-	min-width:20%;
-	width:320px;
-	background-color:#000000;
-	height:100vh;
-}
-
-.mainNav{
-	
-}
-
-.mainNav ul{
-	text-align: center;
-	
-}
-
-.mainNav li{
-	display: inline-block;
-	padding: 20px;
 }
 
 .mainNav ul li a {
@@ -42,35 +29,6 @@ nav{
 	list-style-type:none;
 	font-size:36px;
 	color:#F90;
-}
-#check{
-	overflow:hidden;
-}
-
-#check .user, #check .problem{
-}
-
-#check label{
-	width: 50%;
-	float: left;
-}
-
-#check section{
-	padding:8px 16px;
-}
-
-#check textarea, #check input[type="text"]{
-	width: 50%;
-}
-#check textarea{
-	height: 100px;
-}
-
-#check footer {
-}
-
-#check footer input{
-	margin: 8px 8px 8px 32px;
 }
 
 @media print{    

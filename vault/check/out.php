@@ -1,5 +1,5 @@
 <?php
-	include 'db.inc.php';
+	include '../db.inc.php';
 	
 	$sql = "UPDATE  `dhs16`.`dhs16_problem` SET  `check_out` =  ?,`sign` =  ? WHERE  `dhs16_problem`.`id` = ?"; 	
 	

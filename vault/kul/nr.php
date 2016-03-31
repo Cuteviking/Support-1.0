@@ -1,6 +1,6 @@
 <?php 
 
-	include '../check/db.inc.php';
+	include '../db.inc.php';
 	
 	$sql = "SELECT COUNT('id') FROM `dhs16_problem`";
 	
