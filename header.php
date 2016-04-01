@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Foundation | Welcome</title>
+	<title>DHSupport Ticket</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 	<link rel="stylesheet" href="style.css">
@@ -30,8 +30,8 @@
         				<img class="logo" src="img/logo.png">
                         <nav>        	
                             <ul class="menu">
-                                <li><a href="vault/index.php">Checkin</a></li>
-                                <li><a href="vault/checkout.php">Checkout</a></li>
+                                <li><a href="index.php">Checkin</a></li>
+                                <li><a href="checkout.php">Checkout</a></li>
                             </ul>
                         </nav>
     				</div>

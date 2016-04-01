@@ -1,11 +1,14 @@
-<?php include '../header.php'?>
+<?php include 'header.php'?>
 
-
-			<form action="#" method="GET" id="check">
-				<label for="name">ID/SocialID/Nick:</label><input type="text" id="checkOut" name="checkOut" />
-			</form>
-			
-<?php 	if(isset($_GET['checkOut'])) {
+		<div class="row">
+			<div class="medium-12 columns">
+            	<form action="" method="GET" id="check">
+                	<label for="name">ID/SocialID/Nick:</label><input type="text" id="checkOut" name="checkOut" />
+                </form>
+                    
+    
+             
+<?php if(isset($_GET['checkOut'])) {
 			include 'db.inc.php'; 
 			$sql = "SELECT * FROM  `dhs16_problem` WHERE 'social' OR 'id' OR `name` = ? ";
 			
@@ -17,15 +20,15 @@
 				?>
 			
 			<main id="check">
-				<section>
+				<p>
 					<?php echo $row['id']?>
-				</section>
-				<section>
+				</p>
+				<h3>
 					<?php echo $row['name']?>
 					<?php echo $row['header']?>
-				</section>
+				</h3>
 				<section>
-					<form action="check/out.php" method="GET" id="check">
+					<form action="vault/check/out.php" method="GET" id="check">
 						<?php
                             if($row['sign'] != ""){?>
                                 <label for="sign">Sign:</label><input type="text" id="sign" name="sign" disabled value="<?php echo $row['sign'] ?>" />
@@ -46,6 +49,7 @@
 	 		}
 		} 
 	?>
-		<main>
+    	   </div>
+		</div>
 	</body>
 </html>
