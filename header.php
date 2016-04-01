@@ -1,15 +1,6 @@
-<!DOCTYPE >
-<html>
-	<head>
-		<meta http-equiv="Content-Type"	content="text/html" charset="UTF-8">
-
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<script src="script.js"></script>
-	</head>
-	<body>
-		
-        
-        <main>
+<?php
+	/*require_once('.. /resources/sql.php');*/
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -25,13 +16,6 @@
     	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
     		<div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
     			<div class="row column">
-    				<br>
-    				<nav>        	
-                        <ul class="menu vertical">
-                            <li><a href="vault/index.php">Checkin</a></li>
-                            <li><a href="vault/checkout.php">Checkout</a></li>
-                        </ul>
-                    </nav>
     			</div>
     		</div>
     		<div class="off-canvas-content" data-off-canvas-content>
@@ -44,5 +28,12 @@
     			<div class="callout primary">
     				<div class="row column">
         				<img class="logo" src="img/logo.png">
+                        <nav>        	
+                            <ul class="menu">
+                                <li><a href="vault/index.php">Checkin</a></li>
+                                <li><a href="vault/checkout.php">Checkout</a></li>
+                            </ul>
+                        </nav>
     				</div>
     			</div>
+                

@@ -20,12 +20,17 @@ body{
 	background-color: #FF6600;
 }
 
-.mainNav ul li a {
+nav{
+	float: right;
+	margin:26px;
+}
+
+nav ul li a {
 	font-size:36px;
 	color:#FFF;
 }
 
-.mainNav ul li a:hover {
+nav ul li a:hover {
 	list-style-type:none;
 	font-size:36px;
 	color:#F90;
