@@ -30,8 +30,8 @@
         				<img class="logo" src="img/logo.png">
                         <nav>        	
                             <ul class="menu">
-                                <li><a href="vault/index.php">Checkin</a></li>
-                                <li><a href="vault/checkout.php">Checkout</a></li>
+                                <li><a href="index.php">Checkin</a></li>
+                                <li><a href="checkout.php">Checkout</a></li>
                             </ul>
                         </nav>
     				</div>

@@ -1,5 +1,5 @@
 <?php 
-	include '../db.inc.php';
+	include '../php/db.inc.php';
 	
 	$sql = "SELECT * FROM `dhs16`.`dhs16_user` WHERE name = ?";
 	

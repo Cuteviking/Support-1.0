@@ -16,7 +16,7 @@
                           	<label for="problemDesc">Problem Description:</label>
                             <textarea name="problemDesc" id="problemDesc" required></textarea>
                             <label for="parts">Associated parts:</label>
-                            <textarea id="parts" name="parts" required placeholder="e.g. MSI GeForce GTX 980 Ti Gaming 6GB"></textarea>    
+                            <textarea id="parts" name="parts" placeholder="e.g. MSI GeForce GTX 980 Ti Gaming 6GB"></textarea>    
                             <input type="submit" />	
                         </form>
     				</div>
