@@ -1,7 +1,4 @@
-<?php include 'header.php'?>
-<?php 
-
-	include 'php/db.inc.php';
+<?php include 'php/header.php';
 	
 	$sql = "SELECT * FROM `dhs16_user` WHERE `social` = ?";
 	

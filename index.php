@@ -1,4 +1,4 @@
-<?php include 'header.php'?>
+<?php include 'php/header.php'?>
     		
     			<div class="row">
     				<div class="medium-12 columns">

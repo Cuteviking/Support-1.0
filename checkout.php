@@ -1,14 +1,5 @@
-<?php include 'header.php'?>
+<?php include 'php/header.php'?>
 
-<<<<<<< HEAD:checkout.php
-
-			<form action="#" method="GET" id="check">
-				<label for="name">ID/SocialID/Nick:</label><input type="text" id="checkOut" name="checkOut" />
-			</form>
-			
-<?php 	if(isset($_GET['checkOut'])) {
-			include 'php/db.inc.php'; 
-=======
 		<div class="row">
 			<div class="medium-12 columns">
             	<form action="" method="GET" id="check">
@@ -17,10 +8,8 @@
                     
     
              
-<?php if(isset($_GET['checkOut'])) {
-			include 'db.inc.php'; 
->>>>>>> origin/master:checkout.php
-			$sql = "SELECT * FROM  `dhs16_problem` WHERE 'social' OR 'id' OR `name` = ? ";
+<?php if(isset($_GET['checkOut'])) { 
+			$sql = "SELECT * FROM  `dhs16_problem` WHERE `name` = ? ";
 			
 			$sth = $db->prepare($sql);
 			$sth->bindParam( 1, $_GET['checkOut']);

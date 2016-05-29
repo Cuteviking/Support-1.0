@@ -1,5 +1,6 @@
 <?php
-	/*require_once('.. /resources/sql.php');*/
+	/*require_once('../.. /resources/sql.php');*/
+	include 'db.inc.php';
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
