@@ -1,10 +1,11 @@
 <?php
+	include("php/db.inc.php");
 	if(isset($_POST['problem'])){
 		$sql = "INSERT INTO `dhs16_issue` (`id`, `type`, `row`) VALUES (NULL, ?, ?)";
 	
 	$sth = $db->prepare($sql);
 	$sth->bindParam( 1, $_POST['problem']);
-	$sth->bindParam( 2, $_POST['row']);
+	$sth->bindParam( 2, ucfirst($_POST['row']));
 	$sth->execute();
 	}
 ?>

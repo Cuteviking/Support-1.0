@@ -17,7 +17,9 @@ function statsCallback(XHR){
 	console.log(XHR);
 	document.getElementById("queue").children[0].innerHTML = XHR["queue"];
 	
-	document.getElementById("problem").children[0].innerHTML = XHR["problem"];
+	if(XHR["problem"]["type"] != "none"){
+		document.getElementById("problem").innerHTML = XHR["problem"]["type"]+ " issues on row: " +XHR["problem"]["row"];
+	}
 }
 
 window.addEventListener("load", init);

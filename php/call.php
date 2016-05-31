@@ -25,8 +25,20 @@
 		//fix
 		$fix++;
 		
-		//problem
+		
 	}
-	echo json_encode(array("queue" => $queue, "problem" => array("type" => $type, "row" => $row)));
+	
+	//problem
+	$sql = "SELECT * FROM `dhs16_issue` ORDER BY `id` ASC";
+	
+	$sth = $db->prepare($sql);
+	$sth->execute();
+	
+	while($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+		$type = $row["type"];
+		$dhrow = $row["row"];
+	}
+	
+	echo json_encode(array("queue" => $queue, "problem" => array("type" => $type, "row" => $dhrow)));
 	
 ?>
