@@ -57,5 +57,4 @@
 	?>
 			<button id="print" class="no-print">Print</button>
 		</main>
-	</body>
-</html>
+<?php include 'php/footer.php'?>

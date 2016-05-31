@@ -9,7 +9,7 @@
     
              
 <?php if(isset($_GET['checkOut'])) { 
-			$sql = "SELECT * FROM  `dhs16_problem` WHERE `name` = ? ";
+			$sql = "SELECT * FROM  `dhs16_problem` WHERE `name` = ?  ORDER BY `dhs16_problem`.`check_out` ASC";
 			
 			$sth = $db->prepare($sql);
 			$sth->bindParam( 1, $_GET['checkOut']);
@@ -27,13 +27,20 @@
 					<?php echo $row['header']?>
 				</h3>
 				<section>
-					<form action="vault/check/out.php" method="GET" id="check">
-						<?php
-                            if($row['sign'] != ""){?>
-                                <label for="sign">Sign:</label><input type="text" id="sign" name="sign" disabled value="<?php echo $row['sign'] ?>" />
+                	<?php
+                    	if($row['sign'] != "" && $row['collected'] == 0){?>
+					<form action="php/check/collected.php" method="GET" id="check">
+                    	<label for="sign">Sign:</label><input type="text" id="sign" name="sign" disabled value="<?php echo $row['sign'] ?>" />
+                        <input type="submit" value="Hämtad">
+                         <?php
+                            }elseif($row['collected'] == 1){?>
+                    <form action="" method="GET" id="check">
+						<label for="sign">Sign:</label><input type="text" id="sign" name="sign" disabled value="<?php echo $row['sign'] ?>" />
                         <?php
                             }else{?>
-								<label for="sign">Sign:</label><input type="text" id="sign" name="sign" />
+                    <form action="php/check/out.php" method="GET" id="check">
+						<label for="sign">Sign:</label><input type="text" id="sign" name="sign" />
+                        <input type="submit" value="Klar">
 						<?php
                             }
                   		?>
@@ -50,5 +57,4 @@
 	?>
     	   </div>
 		</div>
-	</body>
-</html>
+<?php include 'php/footer.php'?>

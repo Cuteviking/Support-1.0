@@ -1,5 +1,5 @@
 <?php 
-	include '../php/db.inc.php';
+	include '../db.inc.php';
 	
 	$sql = "SELECT * FROM `dhs16`.`dhs16_user` WHERE name = ?";
 	
@@ -37,5 +37,5 @@
 	
 	
 	
-	header('Location: ../receipt.php?social='.$_POST['social']);
+	header('Location: ../../receipt.php?social='.$_POST['social']);
 ?>

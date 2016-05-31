@@ -2,7 +2,7 @@
     		
     			<div class="row">
     				<div class="medium-12 columns">
-                        <form action="check/in.php" method="POST" id="check">
+                        <form action="php/check/in.php" method="POST" id="check">
                         	<label for="name">Nick:</label>
                             <input type="text" id="name" name="name" required/>                                
                             <label for="social">Social security number:</label>
@@ -24,10 +24,6 @@
     		</div>
     	</div>
     </div>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-<script>
-      $(document).foundation();
-    </script>
-</body>
-</html>
+    
+<?php include 'php/footer.php'?>
+
