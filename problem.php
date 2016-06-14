@@ -1,12 +1,8 @@
 <?php
-	include("php/db.inc.php");
+	require_once('../resources/php/sql.php');
 	if(isset($_POST['problem'])){
-		$sql = "INSERT INTO `dhs16_issue` (`id`, `type`, `row`) VALUES (NULL, ?, ?)";
-	
-	$sth = $db->prepare($sql);
-	$sth->bindParam( 1, $_POST['problem']);
-	$sth->bindParam( 2, ucfirst($_POST['row']));
-	$sth->execute();
+		$sql = new query("INSERT INTO dhs16_issue (id, type, row) VALUES (NULL, '".$_POST['problem']."', '".ucfirst($_POST['row'])."');");
+		$sql->execute();
 	}
 ?>
 <!doctype html>

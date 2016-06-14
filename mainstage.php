@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>DHSupport</title>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+	<link rel="stylesheet" href="css/foundation.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 

@@ -1,41 +1,21 @@
-<?php 
-	include '../db.inc.php';
-	
-	$sql = "SELECT * FROM `dhs16`.`dhs16_user` WHERE name = ?";
-	
-	$sth = $db->prepare($sql);
-	$sth->bindParam( 1, $_POST['name']);
-	$sth->execute();
-	
-	$row = $sth->fetch(PDO::FETCH_ASSOC);
-	if($row == false){
-		$sql = "INSERT INTO `dhs16`.`dhs16_user` (`id`, `name`, `phone`, `seat`, `social`) VALUES (NULL,?,?,?,?)";
-		
-		$sth = $db->prepare($sql);
-		$sth->bindParam( 1, strtolower($_POST['name']));
-		$sth->bindParam( 2, $_POST['phone']);
-		$sth->bindParam( 3, $_POST['seat']);
-		$sth->bindParam( 4, $_POST['social']);
-		$sth->execute();
-	}	
+<?php
+	require_once('../../../resources/php/sql.php');
 
-	
-	$sql = "INSERT INTO `dhs16`.`dhs16_problem` (`id`, `header`, `description`, `parts`, `name`, `social`, `check_in`) 
-			VALUES (NULL, ?, ?, ?, ?, ?, ?);";
-	
-	
+	$results = new query("SELECT * FROM dhs16_user WHERE social = '".$_POST['social']."';");
+
+	$user_exists = false;
+	foreach ($results->get() as $row)
+		$user_exists = true;
+
+	if(!$user_exists){
+		$sqlUser = new query("INSERT INTO dhs16_user (id, name, phone, seat, social) VALUES (NULL,'".strtolower($_POST['name'])."','".$_POST['phone']."','". $_POST['seat']."','".$_POST['social']."');");
+		$sqlUser->execute();
+	}
+
 	$checkIn = date("Y-m-d H:i:s");
-	
-	$sth = $db->prepare($sql);
-	$sth->bindParam( 1, $_POST['problem']);
-	$sth->bindParam( 2, $_POST['problemDesc']);
-	$sth->bindParam( 3, $_POST['parts']);
-	$sth->bindParam( 4, $_POST['name']);
-	$sth->bindParam( 5, $_POST['social']);
-	$sth->bindParam( 6, $checkIn);
-	$sth->execute();
-	
-	
-	
+	$sqlProblem = new query("INSERT INTO dhs16_problem (id, header, description, parts, name, social, check_in) VALUES (NULL,'".$_POST['problem']."','".$_POST['problemDesc']."','".$_POST['parts']."','".$_POST['name']."','".$_POST['social']."','".$checkIn."');");
+	$sqlProblem->execute();
+
 	header('Location: ../../receipt.php?social='.$_POST['social']);
+	//var_dump($sqlProblem->get());
 ?>

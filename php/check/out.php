@@ -1,14 +1,7 @@
 <?php
-	include '../db.inc.php';
+	require_once('../../../resources/php/sql.php');
 	
-	$sql = "UPDATE  `dhs16`.`dhs16_problem` SET  `check_out` =  ?,`sign` =  ? WHERE  `dhs16_problem`.`id` = ?"; 	
-	
-	
-	$sth = $db->prepare($sql);
-	$sth->bindParam( 1, date("Y-m-d H:i:s"));
-	$sth->bindParam( 2, $_GET['sign']);
-	$sth->bindParam( 3, $_GET['id']);
-	$sth->execute();
-
-	header('Location: ../../checkout.php?checkOut='.$_GET['checkOut']);
+	$sql = new query("UPDATE dhs16_problem SET check_out ='".date("Y-m-d H:i:s")."', sign =  '".$_GET['sign']."' WHERE id = '".$_GET['id']."';");	
+	$sql->execute();
+	header('Location: ../../receipt.php?social='.$_GET['checkOut']);
 ?>

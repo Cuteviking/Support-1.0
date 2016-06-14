@@ -19,6 +19,8 @@ function statsCallback(XHR){
 	
 	if(XHR["problem"]["type"] != "none"){
 		document.getElementById("problem").innerHTML = XHR["problem"]["type"]+ " issues on row: " +XHR["problem"]["row"];
+	}else{
+		document.getElementById("problem").innerHTML = "";
 	}
 }
 
@@ -36,6 +38,7 @@ function ajax(url, callback){
 	XHR.onreadystatechange = function () {
 		if (XHR.readyState == 4 || XHR.readyState == "complete") {
 			if (XHR.status == 200) {
+				console.log(JSON.parse(XHR.responseText));
 				callback(JSON.parse(XHR.responseText));
 			} 
 			else {

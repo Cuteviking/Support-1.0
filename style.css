@@ -1,7 +1,3 @@
-body,h1,h2,h3,h4{
-	font-family: "open sans";
-}
-
 .callout.primary{
 	background-color: #072C67;
 
@@ -42,6 +38,43 @@ nav ul li a:hover {
 	color:#F90;
 }
 
+.pricing-table {
+  border: solid 1px #DDDDDD; }
+  .pricing-table li {
+    border-bottom: dotted 1px #DDDDDD;
+    font-size: 0.75rem;
+    padding: 0.875rem 1.125rem; }
+    .pricing-table li:last-child {
+      border-bottom: 0; }
+  .pricing-table .title {
+    background-color: #333333;
+    color: #EEEEEE;
+    font-size: 0.875rem;
+    border-bottom: 0; }
+  .pricing-table .price {
+    background-color: #F6F6F6;
+    color: #333333;
+    font-size: 1.75rem;
+    border-bottom: 0; }
+  .pricing-table .description {
+    color: #777777;
+    font-size: 0.625rem; }
+  .pricing-table .button {
+    margin: 0; }
+
+.only-print, .only-print *{
+	display:none;
+}
+
+.sign{
+	margin: 10px 0;
+}
+
+.sign p{
+	border-bottom: solid 1px #000000;
+	margin: 0;
+}
+
 .mainstage{
 	text-transform: uppercase;
 		
@@ -61,8 +94,12 @@ nav ul li a:hover {
 	font-weight:700;
 }
 
+
 @media print{    
     .no-print, .no-print *{
         display: none !important;
+    }
+	 .only-print, .only-print *{
+        display: block !important;
     }
 }

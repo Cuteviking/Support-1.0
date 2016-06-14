@@ -1,40 +1,22 @@
 <?php 
-	include "db.inc.php";
-	
-	$sql = "SELECT * FROM `dhs16_problem`";
-	
-	$sth = $db->prepare($sql);
-	$sth->execute();
+	require_once('../../resources/php/sql.php');
+	$sql = new query("SELECT * FROM dhs16_problem;");
 	
 	$queue = 0;
-	$rep = array();
-	$fix = 0;
-	
-	while($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 
-		//queue
+	//queue
+	foreach ($sql->get() as $row) {
+		
 		if($row["check_out"] == "0000-00-00 00:00:00"){
 			$queue++;
 		}
-
-		//rep
-		if($row["check_out"] != "0000-00-00 00:00:00" && $row["collected"] == 0){
-			array_push($rep, $row["id"]);
-		}
-		
-		//fix
-		$fix++;
-		
-		
 	}
 	
 	//problem
-	$sql = "SELECT * FROM `dhs16_issue` ORDER BY `id` ASC";
+	$sql = new query("SELECT * FROM dhs16_issue ORDER BY id ASC;");
 	
-	$sth = $db->prepare($sql);
-	$sth->execute();
 	
-	while($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+	foreach ($sql->get() as $row) {
 		$type = $row["type"];
 		$dhrow = $row["row"];
 	}
